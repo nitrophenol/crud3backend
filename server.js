@@ -38,15 +38,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 // Serve static files from /public
-app.use(express.static(path.join(__dirname, "./frontend/build")));
-app.get("*", function (_, res) {
-  res.sendFile(
-    path.join(__dirname, "./frontend/build/index.html"),
-    function (err) {
-      res.status(500).send(err);
-    }
-  );
-});
+// app.use(express.static(path.join(__dirname, "./frontend/build")));
+// app.get("*", function (_, res) {
+//   res.sendFile(
+//     path.join(__dirname, "./frontend/build/index.html"),
+//     function (err) {
+//       res.status(500).send(err);
+//     }
+//   );
+// });
 
 // Include routes
 app.post('/register', (req, res) => {
